@@ -53,7 +53,6 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const auth = useAuth()
   const isAuth = auth.token
-
   if(to.meta.requiredAuth && isAuth == null) {
     next('/')
   } else {

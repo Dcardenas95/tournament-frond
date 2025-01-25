@@ -82,7 +82,6 @@ const store = useAuth()
 
 const loginUser = async () => {
     const response = await store.login(email.value, password.value)
-
     if (response == true) {
         showalertSuccess.value = true
         router.push({name:'dashboard'})
